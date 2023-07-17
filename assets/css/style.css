@@ -16,7 +16,31 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: flex-start;
 }
+
+.weather-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+}
+
+.weather-card {
+    background-color: #f0f0f0; 
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.search-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.search-header h2 {
+    margin-right: 10px;
+}
+
 

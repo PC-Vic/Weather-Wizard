@@ -12,18 +12,65 @@
         <h1 id="forecast-header">Weather Dashboard</h1>
     </header>
     <section role="search">
-        <h2>Search for a City:</h2>
+        <div class="search-header">
+            <h2>Search for a City:</h2>
+            <h3 id="city-output">City Name</h3>
+        </div>
             <form class="row g-3">
-                <div class="col-auto">
+                <div class="col-3">
                   <div class="container" class="input-group">
-                    <input id="navBarSearchForm" type="search" class="form-control-sm" placeholder="Dallas, Orlando etc..." maxlength="200" />
+                    <input id="navBarSearchForm" type="search" class="form-control-lg" placeholder="Dallas, Orlando etc..." maxlength="200" />
                     <span class="d-grid gap-2 col-12 mx-auto">
-                        <button id="search-btn" class="btn btn-primary btn-sm" type="button">Search</button>
+                        <button id="search-btn" class="btn btn-primary btn-md" type="button">Search</button>
                     </span>
                 </div>
                 </div>
             </form>
     </section>
+
+    <!-- Weather Cards -->
+    <section class="mt-4 weather-cards-container">
+        <main>
+          <!-- Weather Card 1 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 1</h4>
+          </div>
+          <!-- Weather Card 2 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 2</h4>
+          </div>
+          <!-- Weather Card 3 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 3</h4>
+          </div>
+          <!-- Weather Card 4 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 4</h4>
+          </div>
+          <!-- Weather Card 5 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 5</h4>
+          </div>
+          <!-- Weather Card 6 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 6</h4>
+          </div>
+          <!-- Weather Card 7 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 7</h4>
+          </div>
+          <!-- Weather Card 8 -->
+          <div class="col-12 col-md-6 col-lg-3 weather card">
+            <h4>City 8</h4>
+          </div>
+          
+
+        
+
+      </main>
+    </section>
+
+  
     
 
     <script src="./assets/js/script.js"></script>
@@ -32,16 +79,4 @@
 
 
 
-<!-- place in between form div-->
-
-
-
-<!-- <label for="staticEmail2" class="visually-hidden">Email</label>
-</div>
-<div class="col-auto">
-  <label for="inputPassword2" class="visually-hidden">Password</label>
-  <input type="password" class="form-control" id="inputPassword2" placeholder="Dallas, Orland etc...">
-</div>
-<div class="col-auto">
-  <button type="submit" class="btn btn-primary mb-3">Search</button> -->
 
