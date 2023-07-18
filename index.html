@@ -12,63 +12,82 @@
         <h1 id="forecast-header">Weather Dashboard</h1>
     </header>
     <section role="search">
-        <div class="search-header">
             <h2>Search for a City:</h2>
-            <h3 id="city-output">City Name</h3>
-        </div>
-            <form class="row g-3">
-                <div class="col-3">
-                  <div class="container" class="input-group">
-                    <input id="navBarSearchForm" type="search" class="form-control-lg" placeholder="Dallas, Orlando etc..." maxlength="200" />
-                    <span class="d-grid gap-2 col-12 mx-auto">
-                        <button id="search-btn" class="btn btn-primary btn-md" type="button">Search</button>
-                    </span>
-                </div>
-                </div>
-            </form>
+            <div class="mainContent">
+              <section>
+                <form class="row g-3">
+                  <div>
+                    <div class="container" class="input-group">
+                      <input id="navBarSearchForm" type="search" class="form-control-lg" placeholder="Dallas, Orlando etc..." maxlength="200" />
+                      <span class="d-grid gap-2 col-12 mx-auto">
+                          <button id="search-btn" class="btn btn-primary btn-md" type="button">Search</button>
+                      </span>
+                  </div>              
+                  </div>
+              </form>
+              <section class="mt-4 city-cards-container">
+                <main>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 1</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 2</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 3</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 4</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 5</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 6</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 7</h4>
+                  </div>
+                  <div class="col-12 col-md-6 city card">
+                    <h4>City 8</h4>
+                  </div>
+              </main>
+            </section>
+              </section>
+              <section>
+                <h3 id="city-name">City Name</h3>
+              </section>
+            </div>
+
+            
     </section>
 
-    <!-- Weather Cards -->
+    <!-- City Cards -->
+
+
+    <!-- weather Cards-->
     <section class="mt-4 weather-cards-container">
-        <main>
-          <!-- Weather Card 1 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 1</h4>
-          </div>
-          <!-- Weather Card 2 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 2</h4>
-          </div>
-          <!-- Weather Card 3 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 3</h4>
-          </div>
-          <!-- Weather Card 4 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 4</h4>
-          </div>
-          <!-- Weather Card 5 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 5</h4>
-          </div>
-          <!-- Weather Card 6 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 6</h4>
-          </div>
-          <!-- Weather Card 7 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 7</h4>
-          </div>
-          <!-- Weather Card 8 -->
-          <div class="col-12 col-md-6 col-lg-3 weather card">
-            <h4>City 8</h4>
-          </div>
-          
+      <main id="five-day">
+      <h4>5-Day Forecast:</h4>
+        <div class="col-12 col-md-6 col-lg-3 weather-card">
+          <h4>City 1</h4>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 weather-card">
+          <h4>City 2</h4>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 weather-card">
+          <h4>City 3</h4>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 weather-card">
+          <h4>City 4</h4>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 weather-card">
+          <h4>City 5</h4>
+        </div>
+    </main>
+  </section>
 
-        
 
-      </main>
-    </section>
 
   
     

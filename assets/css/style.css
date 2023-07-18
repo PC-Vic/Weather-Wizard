@@ -20,27 +20,49 @@
     align-content: flex-start;
 }
 
-.weather-cards-container {
+.city-cards-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     
 }
 
-.weather-card {
+.city-card {
     background-color: #f0f0f0; 
     padding: 15px;
     margin-bottom: 10px;
 }
 
-.search-header {
+
+#city-name {
     display: flex;
-    align-items: baseline;
-    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: right;
+    border: 1px solid black;
+    padding: 50px;
+    height: 350px;
+    width: 900px;
 }
 
-.search-header h2 {
-    margin-right: 10px;
+.weather-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 100px;
+    height: 60px;
+    width: 60px;
 }
 
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+}
 
+#five-day {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
