@@ -15,12 +15,12 @@
             <h2>Search for a City:</h2>
             <div class="mainContent">
               <section>
-                <form class="row g-3">
+                <form id="weather-form" class="row g-3">
                   <div>
                     <div class="container" class="input-group">
                       <input id="navBarSearchForm" type="search" class="form-control-lg" placeholder="Dallas, Orlando etc..." maxlength="200" />
                       <span class="d-grid gap-2 col-12 mx-auto">
-                          <button id="search-btn" class="btn btn-primary btn-md" type="button">Search</button>
+                          <button id="search-btn" class="btn btn-primary btn-md" type="submit">Search</button>
                       </span>
                   </div>              
                   </div>
@@ -55,42 +55,38 @@
             </section>
               </section>
               <section>
-                <h3 id="city-name">City Name</h3>
+                <h3 id="city-name"></h3>
+                <p>Temperature: <span id="temperature"></span>°C</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
               </section>
             </div>
 
             
     </section>
 
-    <!-- City Cards -->
-
 
     <!-- weather Cards-->
     <section class="mt-4 weather-cards-container">
       <main id="five-day">
       <h4>5-Day Forecast:</h4>
-        <div class="col-12 col-md-6 col-lg-3 weather-card">
-          <h4>City 1</h4>
+        <div class="col-12 col-md-6 col-lg-3 weather-card hidden">
+          <h4></h4>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 weather-card">
-          <h4>City 2</h4>
+        <div class="col-12 col-md-6 col-lg-3 weather-card hidden">
+          <h4></h4>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 weather-card">
-          <h4>City 3</h4>
+        <div class="col-12 col-md-6 col-lg-3 weather-card hidden">
+          <h4></h4>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 weather-card">
-          <h4>City 4</h4>
+        <div class="col-12 col-md-6 col-lg-3 weather-card hidden">
+          <h4></h4>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 weather-card">
-          <h4>City 5</h4>
+        <div class="col-12 col-md-6 col-lg-3 weather-card hidden">
+          <h4></h4>
         </div>
     </main>
   </section>
 
-
-
-  
-    
 
     <script src="./assets/js/script.js"></script>
 </body>
