@@ -9,10 +9,19 @@ var temperatureElement = document.getElementById("temperature");
 var humidityElement = document.getElementById("humidity");
 
 
+
+
 function Submit(event){
    
     event.preventDefault()
     var userInput = inputEl.value
+
+    // using their input we want to store it into localStorage
+    // after that we want to create the cards line 30 in html as example
+    // Get the card the text of the user input
+
+
+
     fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ userInput + '&appid='+ apiKey).then(function(response) {
         return response.json()
     }).then(function(data) {
@@ -43,13 +52,29 @@ function getForecast(lat, lon) {
         temperatureElement.textContent = temperatureFahrenheit.toFixed(2);
         humidityElement.textContent = humidity;
         //temp convert F
+        
+        // var mainFiveDay = document.getElementById("five-day")
+        // var fiveDayWeather = document.createElement("h4")
+        // fiveDayWeather.appendChild(mainFiveDay)
 
         for(var i = 0; i < data.list.length; i+= 8) {
+            var fiveDayWeather = document.createElement("div")
+            fiveDayWeather.setAttribute('class', 'col-12 col-md-6 col-lg-3 weather-card')
         console.log(data.list[i].main.humidity.temp)
             var temperatureKelvin = data.list[i].main.temp;
-            var temperatureFahrenheit = (temperatureKelvin - 273.15) * (9 / 5) + 32;
+            var date = data.list[i].dt_txt.split(' ')[0]
+            console.log(date);
+            var temperatureFahrenheit = ((temperatureKelvin - 273.15) * (9 / 5) + 32).toFixed(0)
             var humidity = data.list[i].main.humidity;
-
+            fiveDayWeather.innerHTML = `
+            <ul>
+            <li>Date: ${date} </li>
+            <li>Temp: ${temperatureFahrenheit} </li>
+            <li>Humidity: ${humidity} </li>
+            </ul>
+            `
+            var fiveDay = document.getElementById("five-day")
+            fiveDay.appendChild(fiveDayWeather)
             console.log("Temperature (Fahrenheit):", temperatureFahrenheit);
             console.log("Humidity:", humidity);
 
@@ -63,7 +88,7 @@ function getForecast(lat, lon) {
 
 formEl.addEventListener('submit', Submit)
 
-
+// You will need an addeventListener for when the cities buttons/cards are clicked, it reruns the weather app using their textContent
 
 
 

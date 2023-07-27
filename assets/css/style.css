@@ -5,7 +5,7 @@
 }
 
 #forecast-header {
-    background-color: rgb(44, 76, 255);
+    background-color: rgb(30, 51, 168);
     color: aliceblue;
     text-align: center;
     padding: 20px;
@@ -28,21 +28,31 @@
 }
 
 .city-card {
-    background-color: #f0f0f0; 
-    padding: 15px;
+    background-color: #615f5f; 
+    padding: 5px;
     margin-bottom: 10px;
+    cursor: pointer;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 5px;
 }
 
+.city-card:hover {
+    background-color: #0d6efd;
+}
 
-#city-name {
+#large-weather-card {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     justify-items: right;
     border: 1px solid black;
     padding: 50px;
-    height: 350px;
-    width: 900px;
+    height: 300px;
+    width: 1000px;
+    margin-right: 130px;
+   
 }
 
 .weather-card {
