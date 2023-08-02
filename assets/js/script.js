@@ -52,10 +52,32 @@ function getForecast(lat, lon) {
         temperatureElement.textContent = temperatureFahrenheit.toFixed(2);
         humidityElement.textContent = humidity;
         //temp convert F
+        var forecastHeading = document.createElement("h4");
+        forecastHeading.textContent = "5-Day Forecast:";
+
+        var fiveDayParent = document.querySelector(".weather-cards-container");
+        fiveDayParent.insertBefore(forecastHeading, fiveDayParent.firstChild);
         
-        // var mainFiveDay = document.getElementById("five-day")
-        // var fiveDayWeather = document.createElement("h4")
-        // fiveDayWeather.appendChild(mainFiveDay)
+        // Display City History
+        function displayMessage(type, message) {
+            inputEl.textContent = message;
+            inputEl.setAttribute("class", type);
+        }
+
+
+        if(inputEl === "") {
+            displayMessage("Ooops, city name is required")
+        } else {
+            displayMessage("Here is the weather!")
+            localStorage.setItem("navBar", inputEl);
+            
+
+        };   
+
+       
+
+      
+  
 
         for(var i = 0; i < data.list.length; i+= 8) {
             var fiveDayWeather = document.createElement("div")
