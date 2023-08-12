@@ -10,11 +10,11 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <!-- Header div -->
 
+    <!-- Header div -->
     <header class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -45,36 +45,36 @@
                 Search
               </button>
             </span>
+                <div class="city-card">
+                  <h4 id="city-history"></h4>
+                </div>
           </form>
         </div>
 
-        <!-- div Weather Card-->
+        <!-- Main Weather Card-->
         <div class="col-12 col-md-9">
           <div class="card mt-3">
             <h3 id="city-name"></h3>
             <p>Temperature: <span id="temperature"></span>°C</p>
             <p>Humidity: <span id="humidity"></span>%</p>
           </div>
-        </div>
+        </div>  
       </div>
 
-      <div class="row">
         <!-- City Cards div -->
-        <div class="col-12 col-md-3">
-          <div class="city-card">
-            <h4>City 1</h4>
-          </div>
-         
+    
+        
 
-        <!-- </div> -->
 
-        <!-- Weather Cards div -->
-        <div class="mt-4 weather-cards-container col-12 col-md-9">
-          <div class="row" id="five-day"></div>
+        <!-- 5 day Weather Cards div -->
+     <div class="row">
+        <div class="mt-4 weather-cards-container col-12 col-md-12">
+          <div class="row justify-content-evenly" id="five-day"></div>
         </div>
       </div>
+    
     </main>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>

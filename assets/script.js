@@ -3,12 +3,21 @@ var lat;
 var lon;
 var inputEl = document.querySelector('#navBarSearchForm')
 var formEl = document.querySelector('#weather-form')
+var cityHistory = document.getElementById("city-history")
+var cityCard = document.querySelector(".city-card")
 
 var cityNameElement = document.getElementById("city-name");
 var temperatureElement = document.getElementById("temperature");
 var humidityElement = document.getElementById("humidity");
+var cityArray = JSON.parse(localStorage.getItem("city-array")) || []
 
-
+function displayCityHistory() {
+    cityArray.forEach((city) => {
+        var pastCityEl = document.createElement("h4")
+        pastCityEl.textContent = city
+        cityCard.append(pastCityEl)
+    })
+}
 
 
 function Submit(event){
@@ -34,6 +43,31 @@ function Submit(event){
     })
 
 }
+
+
+function display() {
+    var cityName = inputEl.value.trim();
+    var cityEl = document.createElement("h4")
+    cityEl.textContent = cityName
+    cityCard.append(cityEl)
+    if(!cityArray.includes(cityName)) {
+        cityArray.push(cityName)
+        localStorage.setItem("city-array", JSON.stringify(cityArray));
+    }
+        localStorage.setItem("cityName", cityName);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 function getForecast(lat, lon) {
     fetch('http://api.openweathermap.org/data/2.5/forecast?lat='+ lat + '&lon=' + lon + '&appid=' + apiKey).then(function(weatherData) {
@@ -107,10 +141,5 @@ function getForecast(lat, lon) {
     
 }
 
-
+displayCityHistory()
 formEl.addEventListener('submit', Submit)
-
-// You will need an addeventListener for when the cities buttons/cards are clicked, it reruns the weather app using their textContent
-
-
-
