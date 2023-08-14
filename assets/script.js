@@ -24,6 +24,7 @@ function Submit(event){
    
     event.preventDefault()
     var userInput = inputEl.value
+    display()
 
     // using their input we want to store it into localStorage
     // after that we want to create the cards line 30 in html as example
