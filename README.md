@@ -42,6 +42,10 @@ Important: Keep your API key secure and do not share it publicly in your code or
 const apiKey = "322bh7d6844fb9fhe3d7aha3dbah2185";
 Important: This is just a placeholder example. Make sure to use your own valid API key.
 
+## Live Demo
+Check out the live version of the Weather Wizard:
+[Weather Wizard Live Demo](https:pc-vic.github.io/Weather-Wizard)
+
 ## Contact
 
 If you have any questions, suggestions, or feedback about the Weather App, feel free to reach out:
