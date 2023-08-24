@@ -2,7 +2,7 @@
 
 Welcome to Weather App, a web application that provides real-time weather information for cities around the world. With Weather App, users can retrieve current weather data and a five-day forecast by entering the name of a city. The application is built using HTML, CSS, Bootstrap, and JavaScript, and it integrates with the OpenWeather API to fetch weather data.
 
-![Weather App Screenshot](screenshot.png)
+![Weather App Screenshot](assets/images/Screenshot 2023-08-24 051113.png)
 
 ## Features
 
@@ -36,5 +36,17 @@ Weather App integrates with the OpenWeather API to fetch weather data. To set up
 1. Sign up for an API key from [OpenWeather](https://openweathermap.org/api).
 2. Open the `script.js` file and replace `YOUR_API_KEY` with your actual API key.
 
+Important: Keep your API key secure and do not share it publicly in your code or repository.
+
 ```javascript
-const apiKey = "467be7c6794ab9fbe3d9aab8decc7326";
+const apiKey = "322bh7d6844fb9fhe3d7aha3dbah2185";
+Important: This is just a placeholder example. Make sure to use your own valid API key.
+
+## Contact
+
+If you have any questions, suggestions, or feedback about the Weather App, feel free to reach out:
+
+- Email: nievesvic86@gmail.com
+- GitHub: [PC-Vic](https:github.com/PC-Vic)
+
+We appreciate your interest and input!

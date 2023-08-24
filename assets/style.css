@@ -13,10 +13,10 @@
     margin-bottom: 20px;
 }
 
+/* City Cards */
 .container {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-content: flex-start;
 }
 
@@ -24,6 +24,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -32,8 +34,8 @@ h4 {
 }
 
 .city-card {
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
     cursor: pointer;
     color: rgb(97, 166, 226);
     text-align: center;
@@ -44,8 +46,7 @@ h4 {
     background-color: #364a69;
 }
 
-
-
+/* Main Weather Card */
 #large-weather-card {
     display: flex;
     justify-content: center;
@@ -67,7 +68,7 @@ h4 {
     color: aliceblue;
 }
 
-
+/* 5 Day Weather Cards */
 .weather-card {
     display: flex;
     justify-content: center;

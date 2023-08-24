@@ -5,7 +5,6 @@ var inputEl = document.querySelector('#navBarSearchForm')
 var formEl = document.querySelector('#weather-form')
 var cityHistory = document.getElementById("city-history")
 var cityCard = document.querySelector(".city-card")
-
 var cityNameElement = document.getElementById("city-name");
 var temperatureElement = document.getElementById("temperature");
 var humidityElement = document.getElementById("humidity");
@@ -25,11 +24,6 @@ function Submit(event){
     event.preventDefault()
     var userInput = inputEl.value
     display()
-
-    // using their input we want to store it into localStorage
-    // after that we want to create the cards line 30 in html as example
-    // Get the card the text of the user input
-
 
 
     fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ userInput + '&appid='+ apiKey).then(function(response) {
@@ -57,14 +51,6 @@ function display() {
     }
         localStorage.setItem("cityName", cityName);
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -105,14 +91,8 @@ function getForecast(lat, lon) {
         } else {
             displayMessage("Here is the weather!")
             localStorage.setItem("navBar", inputEl);
-            
-
         };   
 
-       
-
-      
-  
 
         for(var i = 0; i < data.list.length; i+= 8) {
             var fiveDayWeather = document.createElement("div")
@@ -134,12 +114,8 @@ function getForecast(lat, lon) {
             fiveDay.appendChild(fiveDayWeather)
             console.log("Temperature (Fahrenheit):", temperatureFahrenheit);
             console.log("Humidity:", humidity);
-
         }
-
-    })
-    
-    
+    })    
 }
 
 displayCityHistory()
