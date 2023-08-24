@@ -1,4 +1,4 @@
- Weather App
+ Weather Wizard
 
 Welcome to Weather App, a web application that provides real-time weather information for cities around the world. With Weather App, users can retrieve current weather data and a five-day forecast by entering the name of a city. The application is built using HTML, CSS, Bootstrap, and JavaScript, and it integrates with the OpenWeather API to fetch weather data.
 
