@@ -11,6 +11,10 @@ var humidityElement = document.getElementById("humidity");
 var cityArray = JSON.parse(localStorage.getItem("city-array")) || []
 
 function displayCityHistory() {
+    while (cityCard.firstChild) {
+        cityCard.removeChild(cityCard.firstChild);
+    }
+
     cityArray.forEach((city) => {
         var pastCityEl = document.createElement("h4")
         pastCityEl.textContent = city
@@ -26,7 +30,7 @@ function Submit(event){
     display()
 
 
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q='+ userInput + '&appid='+ apiKey).then(function(response) {
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q='+ userInput + '&appid='+ apiKey).then(function(response) {
         return response.json()
     }).then(function(data) {
         console.log(data)
@@ -36,7 +40,9 @@ function Submit(event){
         console.log(lon)
         getForecast(lat, lon)
     })
-
+    .catch(function(error) {
+        console.error('Fetch error:', error);
+    });
 }
 
 
@@ -57,9 +63,9 @@ function display() {
 
 
 function getForecast(lat, lon) {
-    fetch('http://api.openweathermap.org/data/2.5/forecast?lat='+ lat + '&lon=' + lon + '&appid=' + apiKey).then(function(data) {
-        console.log(data)
-        return data.json()
+    fetch('https://api.openweathermap.org/data/2.5/forecast?lat='+ lat + '&lon=' + lon + '&appid=' + apiKey).then(function(weatherData) {
+        console.log(weatherData)
+        return weatherData.json()
         
     }).then(function(data) {
         console.log(data)
@@ -86,7 +92,7 @@ function getForecast(lat, lon) {
         }
 
 
-        if(inputEl === "") {
+        if(inputEl.value === "") {
             displayMessage("Ooops, city name is required")
         } else {
             displayMessage("Here is the weather!")
