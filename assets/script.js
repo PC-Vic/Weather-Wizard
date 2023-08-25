@@ -57,9 +57,9 @@ function display() {
 
 
 function getForecast(lat, lon) {
-    fetch('http://api.openweathermap.org/data/2.5/forecast?lat='+ lat + '&lon=' + lon + '&appid=' + apiKey).then(function(weatherData) {
-        console.log(weatherData)
-        return weatherData.json()
+    fetch('http://api.openweathermap.org/data/2.5/forecast?lat='+ lat + '&lon=' + lon + '&appid=' + apiKey).then(function(data) {
+        console.log(data)
+        return data.json()
         
     }).then(function(data) {
         console.log(data)
