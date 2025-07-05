@@ -124,5 +124,12 @@ function getForecast(lat, lon) {
     })    
 }
 
-displayCityHistory()
+if (cityArray.length > 0) {
+    displayCityHistory();
+}
+
 formEl.addEventListener('submit', Submit)
+
+
+// displayCityHistory()
+// formEl.addEventListener('submit', Submit)

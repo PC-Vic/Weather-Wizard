@@ -4,52 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard, search weather information by city</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
+    
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
 
     <!-- Header div -->
-    <header class="container">
-      <div class="row">
-        <div class="col-12 text-center">
+    <header>
+      <div>
           <h1 id="forecast-header">Weather Dashboard</h1>
         </div>
       </div>
     </header>
 
     <!-- Search Box div -->
-    <main class="container-fluid" role="search">
-      <h2>Search for a City:</h2>
-      <div class="divContent row">
-        <div class="col-12 col-md-3">
-          <form id="weather-form" class="row g-3">
-            <input
-              id="navBarSearchForm"
-              type="search"
-              class="form-control-lg"
-              placeholder="Dallas, Orlando etc..."
-              maxlength="200"
-            />
-            <span class="d-grid gap-2 col-12 mx-auto">
-              <button
-                id="search-btn"
-                class="btn btn-primary btn-md"
-                type="submit"
-              >
-                Search
-              </button>
-            </span>
-                <div class="city-card">
-                  <h4 id="city-history"></h4>
-                </div>
-          </form>
+<!-- Search Box div -->
+<main role="search">
+  <h2>Search for a City:</h2>
+  <div class="divContent">
+    <div>
+      <form id="weather-form">
+
+        <div class="search-box-container">
+          <input
+            id="navBarSearchForm"
+            type="search"
+            placeholder="Dallas, Orlando etc..."
+            maxlength="200"
+          />
         </div>
+<!-- Search Box Button -->
+        <div class="button-container">
+          <button id="search-btn" type="submit">
+            Search
+          </button>
+        </div>
+
+        <div class="city-card">
+          <h4 id="city-history"></h4>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+
 
         <!-- Main Weather Card-->
         <div class="col-12 col-md-9">

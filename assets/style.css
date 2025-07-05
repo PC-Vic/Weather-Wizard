@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 #forecast-header {
@@ -9,7 +9,6 @@
     color: aliceblue;
     text-align: center;
     padding: 20px;
-    border-radius: 15px;
     margin-bottom: 20px;
 }
 
@@ -26,6 +25,7 @@
     justify-content: start;
     margin-bottom: 20px;
     margin-bottom: 20px;
+    border: 1px solid rgb(136, 7, 7);
 }
 
 h4 {
@@ -33,13 +33,39 @@ h4 {
     
 }
 
+/* Search Box */
+    #navBarSearchForm {
+        width: 12%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+    }
+
+    /* Search Button */
+    .button-container {
+        display: flex;
+        margin-top: 10px;
+        width: fit-content;
+    }
+
+    #search-btn {
+        background-color: rgb(30, 51, 168);
+        color: aliceblue;
+        width: 230px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
 .city-card {
+    display: inline-block;
     padding: 10px;
     margin-bottom: 15px;
     cursor: pointer;
     color: rgb(97, 166, 226);
     text-align: center;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
 
 .city-card:hover {
